@@ -33,7 +33,7 @@ useEffect(() => {
   return (
     <DashboardLayout>
 
-      <div className="space-y-6">
+    <div className="space-y-6 p-4 md:p-6">
 
         {/* PAGE HEADER */}
         <div>
@@ -49,7 +49,7 @@ useEffect(() => {
         {/* SEARCH + FILTER */}
         <div className="bg-white rounded-3xl p-6 shadow-sm border border-slate-100">
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
 
             <input
               type="text"

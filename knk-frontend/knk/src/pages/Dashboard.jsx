@@ -61,7 +61,7 @@ function Dashboard() {
   return (
     <DashboardLayout>
 
-      <div className="space-y-8">
+      <div className="space-y-6 p-4 md:p-6">
 
         {/* DASHBOARD CARDS */}
         <DashboardCards stats={stats} />

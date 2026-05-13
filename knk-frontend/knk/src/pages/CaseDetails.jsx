@@ -149,10 +149,10 @@ function CaseDetails() {
         </div>
 
         {/* MAIN GRID */}
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
           {/* LEFT */}
-          <div className="col-span-8 space-y-6">
+          <div className="xl:col-span-8 space-y-6">
 
             {/* Candidate Info */}
             <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
@@ -161,7 +161,7 @@ function CaseDetails() {
                 Candidate Information
               </h3>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div>
                   <p className="text-slate-400 text-sm">
@@ -214,7 +214,7 @@ function CaseDetails() {
                 Internal Processing
               </h3>
 
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
                 <input
                   type="text"
@@ -251,7 +251,7 @@ function CaseDetails() {
           </div>
 
           {/* RIGHT */}
-          <div className="col-span-4 space-y-6">
+          <div className="xl:col-span-4 space-y-6">
 
             {/* STATUS */}
             <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm">
