@@ -18,7 +18,7 @@ function AppRoutes() {
       <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/cases" element={<ProtectedRoute><Cases /></ProtectedRoute>} />
       <Route path="/create-case" element={<ProtectedRoute><CreateCase /></ProtectedRoute>} />
-      <Route path="/cases/:id" element={<CaseDetails />} />
+      <Route path="/cases/:id" element={<ProtectedRoute><CaseDetails /></ProtectedRoute>} />
       <Route path="*" element={<NotFound />} />
       
     </Routes>
