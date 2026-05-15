@@ -132,11 +132,22 @@ exports.getCaseById = async (req, res, next) => {
 // PUT - update full case
 exports.updateCase = async (req, res, next) => {
   try {
+
+    let filter = { _id: req.params.id };
+
+    // Non-admin users can update only their own cases
+    if (req.user.role !== "admin") {
+      filter.user = req.user._id;
+    }
+
     const updatedCase = await Case.findOneAndUpdate(
-    { _id: req.params.id, user: req.user._id },
-    req.body,
-    { new: true, runValidators: true }
-  );
+      filter,
+      req.body,
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
 
     if (!updatedCase) {
       const error = new Error("Case not found");
